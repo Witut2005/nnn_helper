@@ -39,6 +39,12 @@ elif Args.on == True:
 
 elif Args.off == True:
     print('Are you sure??? Hmmmm?')
+    for x in range(0, 3):
+        print('type three times phrase: I will survive nnn')
+        if str(input(str(x+1) + ': ')) != 'I will survive nnn':
+            print('wrong string')
+            exit(3)
+
     File = open(Path, 'w+')
     DefaultConfiguration = open('default.conf', 'r')
     File.write(DefaultConfiguration.read())
